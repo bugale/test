@@ -1,0 +1,56 @@
+name: Build
+on:
+  workflow_call:
+    inputs:
+      inp:
+        required: true
+        type: string
+      inp2:
+        type: string
+      inp3:
+        type: string
+      inp4:
+        type: string
+      inp5:
+        type: string
+      inp6:
+        type: string
+      inp7:
+        type: string
+      inp8:
+        type: string
+      inp9:
+        type: string
+      inp10:
+        type: string
+      inp11:
+        type: string
+      inp12:
+        type: string
+      inp13:
+        type: string
+      inp14:
+        type: string
+      inp15:
+        type: string
+      inp16:
+        type: string
+      inp17:
+        type: string
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    outputs:
+      out: ${{ steps.test2.outputs.out }}
+    steps:
+    - name: Test
+      run: echo "Hello, ${{ github.event.inputs.inp }}"
+    - name: Test2
+      id: test2
+      run: echo "OUT=${{ github.event.inputs.inp }}" >> $GITHUB_OUTPUT
+  test2:
+    runs-on: ubuntu-latest
+    needs: test1
+    steps:
+    - name: Test
+      run: echo "Hello, ${{ github.event.inputs.inp }}"
