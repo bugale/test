@@ -1,0 +1,7 @@
+name: PR
+on: pull_request
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+    with:
+      inp: 'I am a PR'
