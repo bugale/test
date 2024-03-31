@@ -15,6 +15,38 @@ on:
         description: 'Test scenario tags'
         required: false
         type: boolean
+      inp2:
+        type: string
+      inp3:
+        type: string
+      inp4:
+        type: string
+      inp5:
+        type: string
+      inp6:
+        type: string
+      inp7:
+        type: string
+      inp8:
+        type: string
+      inp9:
+        type: string
+      inp10:
+        type: string
+      inp11:
+        type: string
+      inp12:
+        type: string
+      inp13:
+        type: string
+      inp14:
+        type: string
+      inp15:
+        type: string
+      inp16:
+        type: string
+      inp17:
+        type: string
 
 jobs:
   log-the-inputs:
