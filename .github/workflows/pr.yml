@@ -2,6 +2,9 @@ name: PR
 on: pull_request
 jobs:
   build:
-    uses: ./.github/workflows/build.yml
-    with:
-      inp: 'I am a PR'
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "smb://test.s1.local/test1" >> $GITHUB_STEP_SUMMARY
+          echo '<a href="smb://test.s1.local/test1">test</a>' >> $GITHUB_STEP_SUMMARY
+          echo '[test](smb://test.s1.local/test1)' >> $GITHUB_STEP_SUMMARY
